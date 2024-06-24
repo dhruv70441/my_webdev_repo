@@ -1,0 +1,192 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center; /* Center align the content */
+    position: relative; /* Ensure header is positioned relative */
+    padding: 1rem 0; /* Adjust top and bottom padding */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; /* Adjust horizontal padding */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1; /* Allow logo to grow as needed */
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2; /* Ensure toggle button is above nav links */
+}
+
+.nav-toggle.active i {
+    transform: rotate(45deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 3rem;
+    transition: left 0.3s ease;
+    z-index: 1; /* Ensure nav links are behind toggle button */
+}
+
+.nav-links.active {
+    left: 0; /* Slide in when active */
+}
+
+.nav-links li {
+    margin: 1rem 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links a i {
+    margin-right: 0.5rem;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+}
+
+/* Responsive styling */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        height: auto;
+        width: auto;
+        background: none;
+        padding-top: 0;
+        transition: none;
+    }
+
+    .nav-links li {
+        margin: 0 1rem;
+    }
+
+    .nav-links a {
+        padding: 0;
+    }
+}
+
+
+
+/* Carousel Styles */
+.carousel-container {
+    margin: 2rem 0;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 200px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.product-info p {
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.view-all {
+    display: inline-block;
+    margin: 1rem 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Carousel Styles */
+@media (max-width: 768px) {
+    .product-card {
+        width: 150px; /* Adjust card width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 120px; /* Further adjust card width for extra small screens */
+    }
+}

@@ -1,0 +1,130 @@
+body {
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#firstname ,#lastname {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+
+.inline_name {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#firstName, #lastName {
+    width: 200px;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    outline: none;
+
+}
+
+.inline_options {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#dob, #gender {
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    outline: none;
+}
+
+#email, #password, #confirmPassword{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    outline: none;
+}
+
+button {
+    display: block;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    cursor: pointer
+}
+
+button:hover {
+    background-color: #5a5a5a;
+}
+
+/* input, select {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+} */
+
+/* button {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    cursor: pointer;
+} */
+
+
+
+a {
+    color: #9a9a9a;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
